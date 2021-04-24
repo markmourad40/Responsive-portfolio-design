@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick-theme.css" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/932600baed.js" crossorigin="anonymous"></script>
+
+  <title>Mark's Portfolio</title>
+  <link rel="shortcut icon" href="rockrms-brands.svg" type="image/x-icon">
+  <style>
+    body,
+    html {
+      width: 100%;
+      margin: 0px;
+      background-color: #1f2336;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    .row .col-lg-12 .navbar .navbar-brand {
+      color: white;
+      font-size: 40px;
+      font-family: Forte;
+    }
+
+    .row .col-lg-12 .navbar .collapse .navbar-nav .nav-item .nav-link {
+      color: white;
+      font-size: medium;
+    }
+
+    .row .col-lg-12 .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+      color: #ffc756;
+    }
+
+    .myButt {
+      border: 1px solid #ffc756;
+      color: #ffc756;
+      border-radius: 3px;
+      width: 150px;
+      height: 37px;
+    }
+
+    .mybutton {
+      border: 1px solid #ffc756;
+      color: #ffc756;
+      border-radius: 3px;
+      width: 150px;
+      height: 45px;
+    }
+
+    .mybutton:hover,
+    .myButt:hover {
+      background-color: #ffc756;
+      /* background-color: #ffd601; */
+      color:#1f2336;
+    }
+
+    .row .col-lg-12 .navbar .collapse .navbar-nav .serch-btn {
+      border: 1px solid #ffc756;
+      color: #ffc756;
+      border-radius: 3px;
+      width: 150px;
+      height: 45px;
+    }
+
+    .row .col-lg-12 .navbar .collapse .navbar-nav .serch-btn:hover {
+      background-color: #ffc756;
+      color:#1f2336;
+    }
+
+    /* .row .col-lg-12 .navbar .collapse .navbar-nav .activee{
+      
+    } */
+    .container nav .nav-tabs {
+      /* padding: 15px 50px; */
+      font-size: 20px;
+      /* font-weight: 500; */
+    }
+
+    .container nav .nav-tabs .nav-link {
+      color: white;
+    }
+
+    .container nav .nav-tabs .active {
+      color:#1f2336;
+      background-color: #ffc756;
+    }
+    .container .mx-auto .nav .nav-item:hover{
+      background-color: #ffc756;
+      color: #1f2336;
+    }
+
+    #back2Top {
+      width: 50px;
+      line-height: 50px;
+      overflow: hidden;
+      z-index: 999;
+      display: none;
+      cursor: pointer;
+      -moz-transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      background-color:#1f2336;
+      color:#ffc756;
+      text-align: center;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 50%;
+      border: 1px solid #ffc756;
+    }
+
+    #back2Top:hover {
+      background-color: #ffc756;
+      color:#1f2336;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    /* Container for skill bars */
+    .containerSkills {
+      width: 100%;
+      background-color: #1f2336;
+    }
+
+    .skills {
+      text-align: right;
+      /* Right-align text */
+      padding-top: 5px;
+      /* Add top padding */
+      /* padding-bottom: 10px; */
+      /* Add bottom padding */
+      color: white;
+      /* White text color */
+    }
+
+    .html {
+      width: 90%;
+      background-color: #ffc756;
+    }
+
+    .css {
+      width: 80%;
+      background-color: #ffc756;
+    }
+
+    .js {
+      width: 65%;
+      background-color: #ffc756;
+    }
+
+    .php {
+      width: 75%;
+      background-color: #ffc756;
+    }
+
+    .containerEX {
+      position: relative;
+      width: 100%;
+    }
+
+    .imageEX {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: 300px;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      border-radius: 20px;
+    }
+
+    .middleEX {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      /* text-align: center; */
+    }
+
+    .containerEX:hover .imageEX {
+      opacity: 0.3;
+    }
+
+    .containerEX:hover .middleEX {
+      opacity: 1;
+    }
+
+    /* [1] The container */
+    .img-hover-zoom {
+      height: 200px;
+      /* [1.1] Set it as per your need */
+      overflow: hidden;
+      /* [1.2] Hide the overflowing of child elements */
+    }
+
+    /* [2] Transition property for smooth transformation of images */
+    .img-hover-zoom img {
+      transition: transform .5s ease;
+    }
+
+    /* [3] Finally, transforming the image when container gets hovered */
+    .img-hover-zoom:hover img {
+      transform: scale(1.5);
+    }
+
+    .myDiv:hover {
+      background-color: #ffc756;
+      border-radius: 7px;
+      color: #1f2336;
+    }
+    .container-fluid .container .row .col .navbar .navbar-nav .nav-item .nav-link{
+      color: white;
+    }
+    .container-fluid .container .row .col .navbar .navbar-nav .nav-item .nav-link:hover{
+      color:#ffc756;
+    }
+    .container .tab-content .tab-pane .row .col-lg-4 h2:hover{
+      color: #ffc756;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid pr-0 pl-0">
+    <!-- Nav Bar -->
+    <div class="row mt-3 mx-5">
+      <div class="col-lg-12 col-md-12 sm-12" style="width: 100%;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand col-lg-6 col-md-6 col-sm-6 " href="#">
+            <i class="fab fa-rockrms" style="font-size:40px;color:#ffc756"></i> Rock</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mx-auto">
+              <li class="nav-item activee pr-2">
+                <a class="nav-link" href="#" style="color: #ffc756;">HOME</a>
+              </li>
+              <li class="nav-item pr-2">
+                <a class="nav-link" href="#">PRICE</a>
+              </li>
+              <li class="nav-item pr-2">
+                <a class="nav-link" href="#">SHOP</a>
+              </li>
+              <li class="nav-item pr-2">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+              <button class="btn my-2 my-sm-0 serch-btn" style="width: 110px;" type="submit">LET'S CHAT</button>
+            </ul>
+          </div>
+        </nav>
+        <div class="container mx-auto">
+          <div class="row mt-5">
+            <div class="col-lg-6 col-md-4 col-sm-12 mt-4">
+              <p style="font-size:40px; color:#ffc756; font-family:-apple-system, BlinkMacSystemFont">
+                Hello, I'm </p>
+              <p style="font-size:120px; margin-top: -50px; width: 100%;font-family: -apple-system, BlinkMacSystemFont;">
+                Mark</p>
+              <p style="font-size:120px; margin-top: -100px; font-family: -apple-system, BlinkMacSystemFont;"> Mourad</p>
+              <p class="mb-5" style=" width: 120%; font-size:35px; margin-top: -20px; font-family: -apple-system, BlinkMacSystemFont">
+                Web Developer</p>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 mx-auto" style="margin-top: -30px;">
+              <img src="mark.png" alt="" style="width: 585px; height: 570px;">
+            </div>
+          </div>
+        </div>          
+
+      </div>
+    </div>
+    <hr class="mb-0" style="background-color: #313552;margin-top: 0;">
+
+  </div>
+  <div class="container">
+    <nav class="mx-auto" style="width: 97.37%;">
+      <div class="nav nav-tabs row text-center" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active col-lg-2 col-md-4 col-sm-6" id="nav-about-tab" data-toggle="tab"
+          href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="true"
+          style="border: 1px solid #313552;">ABOUT</a>
+        <a class="nav-item nav-link col-lg-2 col-md-4 col-sm-6" id="nav-skills-tab" data-toggle="tab" href="#nav-skills"
+          role="tab" aria-controls="nav-skills" aria-selected="false" style="border: 1px solid #313552;">SKILLS</a>
+        <a class="nav-item nav-link col-lg-2 col-md-4 col-sm-6" id="nav-service-tab" data-toggle="tab"
+          href="#nav-service" role="tab" aria-controls="nav-service" aria-selected="false"
+          style="border: 1px solid #313552;">SERVICE</a>
+        <a class="nav-item nav-link col-lg-2 col-md-4 col-sm-6" id="nav-interview-tab" data-toggle="tab"
+          href="#nav-interview" role="tab" aria-controls="nav-interview" aria-selected="false"
+          style="border: 1px solid #313552;">INTERVIEW</a>
+        <a class="nav-item nav-link col-lg-2 col-md-4 col-sm-6" id="nav-award-tab" data-toggle="tab" href="#nav-award"
+          role="tab" aria-controls="nav-award" aria-selected="false" style="border: 1px solid #313552;">AWARD</a>
+        <a class="nav-item nav-link col-lg-2 col-md-4 col-sm-6" id="nav-exhibition-tab" data-toggle="tab"
+          href="#nav-exhibition" role="tab" aria-controls="nav-exhibition" aria-selected="false"
+          style="border: 1px solid #313552;">EXHIBITION</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent" style="width: 100%; background-color: #313552;">
+      <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+        <div class="row mx-auto">
+          <div class="col-lg-6 col-md-12">
+            <img src="rest.JPG" width="100%" alt="">
+          </div>
+          <div class="col-lg-6 col-md-12 mt-5">
+            <p style="color:#ffc756;">ABOUT ME</p>
+            <h1 style="font-family: -apple-system, BlinkMacSystemFont">
+              Why hire me for your next project?</h1> <br>
+            <p>Meet my startup design agency <span style="color:#ffc756;">Shape Rex</span> Currently I am working at
+              <span style="color:#ffc756;">CodeNext</span> as Product Designer. Before that I’ve worked at <span
+                style="color:#ffc756;">SpurBee</span>, Dhaka as a UX, UI Designer.
+            </p>
+            <p>I love to work in User Experience & User Interface designing. Because I love to solve the design problem
+              and find easy and better solutions to solve it. I always try my best to make good user interface with the
+              best user experience. I have been working as a Visual designer from.</p>
+            <div class="mt-5 mb-5">
+              <button class="btn my-2 my-sm-0 mybutton" type="submit">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-skills" role="tabpanel" aria-labelledby="nav-skills-tab">
+        <div class="row mx-auto pb-5">
+          <div class="col-lg-6 col-md-6 mt-5">
+            <div class="mx-auto" style="width: 85%;">
+              <p style="float:left;">COMMUNICATION</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">90%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills html"></div>
+              </div>
+              <div style="clear: both; margin-top: 50px;"></div>
+              <p style="float: left;">ORGANIZATION</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">80%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills css"></div>
+              </div>
+              <div style="clear: both;margin-top: 50px;"></div>
+              <p style="float: left;">ANALYTICAL ABILITIES</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">65%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills js"></div>
+              </div>
+              <div style="clear: both; margin-top: 50px;"></div>
+              <p style="float: left;">CREATIVITY</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">75%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills php"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mt-5">
+            <div class="mx-auto" style="width: 85%;">
+              <p style="float:left;">PROJECT MANAGEMENT</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">90%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills html"></div>
+              </div>
+              <div style="clear: both; margin-top: 50px;"></div>
+              <p style="float: left;">PERSEVERANCE</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">80%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills css"></div>
+              </div>
+              <div style="clear: both;margin-top: 50px;"></div>
+              <p style="float: left;">PROBLEM SOLVING</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">65%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills js"></div>
+              </div>
+              <div style="clear: both; margin-top: 50px;"></div>
+              <p style="float: left;">RESOURCEFULNESS</p>
+              <p style="float: right; color: #ffc756; padding-right: 10px;">75%</p><br><br>
+              <div class="containerSkills">
+                <div class="skills php"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
+        <div class="row mx-auto">
+          <div class="col-lg-4 mt-5">
+            <i class="fas fa-crosshairs" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Business Strategy</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <i class="fas fa-puzzle-piece" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Brand Strategy</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <i class="far fa-object-group" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Visual Design</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <i class="fas fa-box-open" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Product Design</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <i class="fas fa-fingerprint" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Interactive Design</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <i class="fas fa-chart-pie" style="font-size:40px;color:#ffc756"></i>
+            <h2 class="mt-3">Motion Graphic</h2>
+            <p class="mt-3">Strategy develop customer in organisational knowledge and market perspectives that inform
+              and provoke.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-interview" role="tabpanel" aria-labelledby="nav-interview-tab">
+        <div class="row mx-auto pb-5">
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="int1.jpg" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Business Strategy</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="int2.jpg" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Business Strategy</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="int3.jpg" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Business Strategy</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="int4.jpg" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Business Strategy</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-award" role="tabpanel" aria-labelledby="nav-award-tab">
+        <div class="row mx-auto pb-5">
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="brand1.png" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Awards Name Here</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="brand2.png" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Awards Name Here</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="brand3.png" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Awards Name Here</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5">
+            <img class="rounded" src="brand4.png" width="200px" height="200px" style="float: left;" alt="">
+            <div style="margin-left: 220px;">
+              <h3 class="pb-3" style="font-family: -apple-system, BlinkMacSystemFont; color: #ffc756;">
+                Awards Name Here</h3>
+              <p>There are many variations of passages lorem Ipsum available, but the majority have suffered alteration.
+                <br>There are many variations of passages lorem Ipsum available, but the majority have suffered
+                alteration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-exhibition" role="tabpanel" aria-labelledby="nav-exhibition-tab">
+        <div class="row mx-auto pb-5">
+
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex1.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex2.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex3.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex4.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex5.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="containerEX mx-auto" style="width: 100%;">
+              <img src="ex6.jpg" alt="Avatar" class="imageEX" style="width:100%">
+              <div class="middleEX">
+                <p>Can you help translate this site into a foreign?</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  <div class="container mt-5">
+    <p
+      style="color: #ffc756; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+      MY CLIENT</p>
+    <h2 style="font-family: -apple-system, BlinkMacSystemFont;">PROJECTS</h2>
+    <div class="row multiple-items mt-5">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p1.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p2.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p3.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p4.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p5.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card" style="background-color:#313552;">
+          <div class="img-hover-zoom img-hover-zoom--xyz">
+            <img class="rounded" src="p6.jpg" width="100%" height="190px" alt="Another Image zoom-on-hover effect">
+          </div>
+          <div class="card-body" style="color: white;">
+            <p style="color: #ffc756; font-size: small;">APP, GAME, WEB</p>
+            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Project Management Admin Panal
+            </h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn myButt mt-3">READ MORE</a>
+          </div>
+          <hr style="font-size:xx-large; background-color: #ffc756; margin-bottom: 0px;">
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  <div class="container mt-5">
+    <p
+      style="color: #ffc756; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+      TESTIMONIALS</p>
+    <h2 style="font-family: -apple-system, BlinkMacSystemFont;">Happy Clients Says</h2>
+
+    <div class="slider-for"></div>
+    <div class="row mx-auto slider-nav mt-5">
+      <div class="col-lg-6 ">
+        <div
+          style="width: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+          <div class="mt-3" style="float: left;">
+            <img class="mt-3 ml-3" src="avatar.jpg" style="border-radius: 50%; float: left;" width="70px" height="70px">
+            <h3 style="padding-left: 100px;" class="mt-4"> Oliver Steve</h3>
+            <p style="padding-left: 100px; margin-top: -10px; color: #ffc756;">
+              Product Designer at CodeNext</p>
+          </div>
+          <h1 class="mt-3 mr-4" style="float: right; font-size:80px; color: #1f2336;">"</h1>
+          <h5 class="mx-auto pb-4 pt-2" style="clear: both; width: 93%;">We are motivated by the satisfaction of our
+            clients. Put your trust in us and share in our growth Asset is made up of a team of expert, committed and
+            experienced people with a passion for financial markets. Our goal is to achieve continuous.</h5>
+        </div>
+      </div>
+      <div class="col-lg-6 ">
+        <div
+          style="width: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+          <div class="mt-3" style="float: left;">
+            <img class="mt-3 ml-3" src="avatar.jpg" style="border-radius: 50%; float: left;" width="70px" height="70px">
+            <h3 style="padding-left: 100px;" class="mt-4"> Oliver Steve</h3>
+            <p style="padding-left: 100px; margin-top: -10px; color: #ffc756;">
+              Product Designer at CodeNext</p>
+          </div>
+          <h1 class="mt-3 mr-4" style="float: right; font-size:80px; color: #1f2336;">"</h1>
+          <h5 class="mx-auto pb-4 pt-2" style="clear: both; width: 93%;">We are motivated by the satisfaction of our
+            clients. Put your trust in us and share in our growth Asset is made up of a team of expert, committed and
+            experienced people with a passion for financial markets. Our goal is to achieve continuous.</h5>
+        </div>
+      </div>
+      <div class="col-lg-6 ">
+        <div
+          style="width: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+          <div class="mt-3" style="float: left;">
+            <img class="mt-3 ml-3" src="avatar.jpg" style="border-radius: 50%; float: left;" width="70px" height="70px">
+            <h3 style="padding-left: 100px;" class="mt-4"> Oliver Steve</h3>
+            <p style="padding-left: 100px; margin-top: -10px; color: #ffc756;">
+              Product Designer at CodeNext</p>
+          </div>
+          <h1 class="mt-3 mr-4" style="float: right; font-size:80px; color: #1f2336;">"</h1>
+          <h5 class="mx-auto pb-4 pt-2" style="clear: both; width: 93%;">We are motivated by the satisfaction of our
+            clients. Put your trust in us and share in our growth Asset is made up of a team of expert, committed and
+            experienced people with a passion for financial markets. Our goal is to achieve continuous.</h5>
+        </div>
+      </div>
+      <div class="col-lg-6 ">
+        <div
+          style="width: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+          <div class="mt-3" style="float: left;">
+            <img class="mt-3 ml-3" src="avatar.jpg" style="border-radius: 50%; float: left;" width="70px" height="70px">
+            <h3 style="padding-left: 100px;" class="mt-4"> Oliver Steve</h3>
+            <p style="padding-left: 100px; margin-top: -10px; color: #ffc756;">
+              Product Designer at CodeNext</p>
+          </div>
+          <h1 class="mt-3 mr-4" style="float: right; font-size:80px; color: #1f2336;">"</h1>
+          <h5 class="mx-auto pb-4 pt-2" style="clear: both; width: 93%;">We are motivated by the satisfaction of our
+            clients. Put your trust in us and share in our growth Asset is made up of a team of expert, committed and
+            experienced people with a passion for financial markets. Our goal is to achieve continuous.</h5>
+        </div>
+      </div>
+    </div><br><br><br><br>
+
+    <div class="container mt-5">
+      <p
+        style="color: #ffc756; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        SOCIAL MEDIA</p>
+      <h2 style="font-family: -apple-system, BlinkMacSystemFont;">Let’s Be Friends</h2>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> Linkedin</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="fab fa-linkedin-in pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> Facebook</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="https://www.facebook.com/mark.mourad.507" target="_blank">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="fab fa-facebook-f pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> Instagram</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="fab fa-instagram pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> Twitter</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="fab fa-twitter pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> WhatsApp</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="fab fa-whatsapp pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="row mx-auto"
+            style="width: 100%; height: 100%; background-color:#313552;border: 1px solid #ffc756; border-radius: 10px; font-family: -apple-system, BlinkMacSystemFont;">
+            <div class="col-lg-9 col-md-9 col-sm-9 mx-auto my-auto">
+              <h3 class="mt-3"> Email</h3>
+              <p style="color: #ffc756;"> Professional Social Profile</p>
+            </div>
+            <div class="btn col-lg-3 col-md-3 col-sm-3 mx-auto my-auto myDiv" style=" width: 100%; height: 100%;">
+              <a href="">
+                <i style="width: 100%; font-size: 50px; color: #1f2336;" class="far fa-envelope pt-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+  <div class="container-fluid" style="background-color: #313552;">
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-3 col-sm-12 mx-auto" style="font-size: 40px; font-family: Forte;">
+          <i class="fab fa-rockrms" style="font-size:40px;color:#ffc756"></i> Rock
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 mx-auto text-center">
+          <p style="font-size: 50px; font-family: -apple-system, BlinkMacSystemFont;">Let’s Talk?</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 mx-auto text-right">
+          <button class="btn mybutton my-2 my-sm-0 serch-btn" type="submit">LET'S CHAT</button>
+        </div>
+      </div>
+      <div class="row pt-5 mx-auto">
+        <div class="col mx-auto">
+          <nav class="navbar navbar-expand-lg">
+            <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupported"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span style=" background-color:#ffc756" class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupported">
+            <ul class="navbar-nav mr-auto mx-auto text-center">
+              <li class="nav-item activee pr-4">
+                <a class="nav-link" href="#" style="color: #ffc756;">HOME</a>
+              </li>
+              <li class="nav-item pr-4">
+                <a class="nav-link" href="#">PRICE</a>
+              </li>
+              <li class="nav-item pr-4">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <p>Copyright By@Example - 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+  <script type="text/javascript" src="slick.min.js"></script>
+  <script>
+    $('.multiple-items').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 770,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        // {
+        //   breakpoint: 500,
+        //   settings: {
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1
+        //   }
+        // }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    $(window).scroll(function () {
+      var height = $(window).scrollTop();
+      if (height > 100) {
+        $('#back2Top').fadeIn();
+      } else {
+        $('#back2Top').fadeOut();
+      }
+    });
+    $(document).ready(function () {
+      $("#back2Top").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+      });
+
+    });
+  </script>
+</body>
+
+</html>
